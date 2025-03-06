@@ -105,7 +105,6 @@ services:
     container_name: caddy
     environment:  # Pass variables from the base compose
       CADDY_EMAIL: "${CADDY_EMAIL}"
-      CADDY_LOGIN_TIMEOUT: "${CADDY_LOGIN_TIMEOUT}"
       DOMAIN: "${DOMAIN}"
     ports:
       - "80:80"    # HTTP

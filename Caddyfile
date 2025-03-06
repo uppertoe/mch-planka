@@ -5,6 +5,10 @@
 	email {$CADDY_EMAIL}
 }
 
+{$DOMAIN} {
+    redir planka.{$DOMAIN}
+}
+
 planka.{$DOMAIN} {
 	reverse_proxy planka:1337
 }
