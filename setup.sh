@@ -69,6 +69,10 @@ chmod 600 "$NEW_USER_SSH/authorized_keys"
 
 echo "User '$NEW_USER' created, and root's SSH key copied to $NEW_USER."
 
+echo "Now let's set a password for '$NEW_USER' (this is *not* for SSH logins, since those are disabled)."
+echo "This password is for 'sudo' usage or local console access."
+passwd "$NEW_USER"
+
 #------------------------------------------------------------------------------------
 # 2. Harden SSH: Disable root login & password auth
 #------------------------------------------------------------------------------------
