@@ -1,6 +1,7 @@
 services:
   planka:
     image: ghcr.io/plankanban/planka:latest
+    container_name: planka
     restart: on-failure
     volumes:
       - user-avatars:/app/public/user-avatars
@@ -88,6 +89,7 @@ services:
 
   postgres:
     image: postgres:16-alpine
+    container_name: postgres
     restart: on-failure
     volumes:
       - db-data:/var/lib/postgresql/data
