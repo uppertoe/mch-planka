@@ -29,7 +29,7 @@ services:
       - DEFAULT_ADMIN_USERNAME=${DEFAULT_ADMIN_USERNAME}
 
       # - SHOW_DETAILED_AUTH_ERRORS=false # Set to true to show more detailed authentication error messages. It should not be enabled without a rate limiter for security reasons.
-      - ALLOW_ALL_TO_CREATE_PROJECTS=false
+      # - ALLOW_ALL_TO_CREATE_PROJECTS=false
 
       # - S3_ENDPOINT=
       # - S3_REGION=
