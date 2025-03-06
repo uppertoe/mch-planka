@@ -8,7 +8,7 @@ services:
       - project-background-images:/app/public/project-background-images
       - attachments:/app/private/attachments
     environment:
-      - BASE_URL=https://planka.${DOMAIN}
+      - BASE_URL=https://${DOMAIN}
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=${SECRET_KEY}
 
