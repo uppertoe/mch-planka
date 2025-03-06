@@ -1,0 +1,10 @@
+# =============================
+# Global configuration
+# =============================
+{
+	email {$CADDY_EMAIL}
+}
+
+planka.{$DOMAIN} {
+	reverse_proxy planka:1337
+}
