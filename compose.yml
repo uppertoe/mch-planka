@@ -7,6 +7,9 @@ services:
       - user-avatars:/app/public/user-avatars
       - project-background-images:/app/public/project-background-images
       - attachments:/app/private/attachments
+      - ./customisation/public/favicon.ico:/app/public/favicon.ico
+      - ./customisation/public/logo192.png:/app/public/logo192.png
+      - ./customisation/public/logo512.png:/app/public/logo512.png
     environment:
       - BASE_URL=https://${DOMAIN}
       - DATABASE_URL=postgresql://postgres@postgres/planka
@@ -115,7 +118,7 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       - "./Caddyfile:/etc/caddy/Caddyfile:ro"
-      - "./assets:/assets"
+      - "./customisation/login:/customisation/login"
       - "./config/caddy/data:/data"
       - "./config/caddy/config:/config"
     restart: unless-stopped

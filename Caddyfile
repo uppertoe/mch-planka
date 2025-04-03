@@ -12,7 +12,7 @@
 	# 2) When matched, rewrite to our local file and serve it directly
 	handle @cover {
 		root * /
-		rewrite * /assets/images/mch-cover.jpg
+		rewrite * /customisation/login/cover.jpg
 		file_server
 	}
 
