@@ -115,6 +115,7 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       - "./Caddyfile:/etc/caddy/Caddyfile:ro"
+      - "./assets:/assets"
       - "./config/caddy/data:/data"
       - "./config/caddy/config:/config"
     restart: unless-stopped
